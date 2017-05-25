@@ -1,0 +1,23 @@
+
+#listtable{
+	margin:1px auto;
+	width:300px;
+	border:1px solid #000;
+}
+#listtable td{
+	padding:0;
+}
+
+#itemId{
+	width:50px;
+}
+#itemName{
+	width:250px
+}
+#itemaddcenter{
+	width:100%;
+	text-align:center;
+}
+#addtable{
+	margin:0 auto;
+}

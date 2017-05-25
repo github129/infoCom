@@ -1,0 +1,16 @@
+#center{
+	width: 100%;
+}
+
+#itemtable{
+	margin:0 auto;
+}
+#itemtable th,td{
+	text-align:center;
+	padding:0;
+}
+#updatebutton{
+	background-color:#ff8080;
+	width:50px;
+	font-size:13px;
+}

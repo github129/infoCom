@@ -1,0 +1,18 @@
+#centertable{
+	width:100%;
+}
+table{
+	width:100%;
+	margin:auto;
+	margin-top:100px;
+}
+th{
+	text-align:right;
+}
+td{
+	text-align:left;
+}
+button{
+	width:150px;
+	font-size:20px;
+}

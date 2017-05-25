@@ -1,0 +1,9 @@
+
+#sitetable{
+	text-align:center;
+	width:300px;
+}
+#sitetable td,th{
+	text-align:center;
+	padding:0;
+}

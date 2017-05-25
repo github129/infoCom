@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+	<!-- ここからアクション -->
+	<package name="com.internousdev.info.action" extends="struts-default">
+
+		<!-- 情報を取得するアクション -->
+		<action name="UrlAction" class="com.internousdev.info.action.UrlAction"
+			method="execute">
+			<result name="success">top.jsp</result>
+			<result name="error">insert.jsp</result>
+		</action>
+
+
+<!-- ーーーーーーーーーーーー登録アクションーーーーーーーーーーーーーーーーーーーー -->
+		<!-- 商品を登録アクション -->
+		<action name="ItemInsertAction" class="com.internousdev.info.action.ItemInsertAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminItemAddAction</result>
+			<result name="error">adminItemAdd.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+		<!-- サイトを登録アクション -->
+		<action name="SiteInsertAction" class="com.internousdev.info.action.SiteInsertAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminSiteAddAction</result>
+			<result name="error">adminSiteAdd.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+		<!-- urlを登録アクション -->
+		<action name="UrlInsertAction" class="com.internousdev.info.action.UrlInsertAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminUrlAddAction</result>
+			<result name="error">adminUrlAdd.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+
+<!-- ーーーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーーー -->
+
+
+		<!-- 値段を表示するアクション -->
+		<action name="InfoGetAction" class="com.internousdev.info.action.InfoGetAction"
+			method="execute">
+			<result name="success">top.jsp</result>
+			<result name="error">insert.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+
+
+
+		<!-- 商品情報を表示するアクション -->
+		<action name="ItemSelectAction" class="com.internousdev.info.action.ItemSelectAction"
+			method="execute">
+			<result name="success">itemDetail.jsp</result>
+			<result name="error">insert.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+
+
+		<!-- 管理者用TOPに遷移するアクション -->
+		<action name="GoAdminTopAction" class="com.internousdev.info.action.GoAdminTopAction"
+			method="execute">
+			<result name="success">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+<!--
+
+ーーーーーーーーーーーーーーーーー登録画面遷移ーーーーーーーーーーーーーーーーーーーーー
+
+ -->
+
+		<!-- 商品登録画面へ遷移するアクション -->
+		<action name="GoAdminItemAddAction" class="com.internousdev.info.action.GoAdminItemAddAction"
+			method="execute">
+			<result name="success">adminItemAdd.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+				<!-- サイト登録画面へ遷移するアクション -->
+		<action name="GoAdminSiteAddAction" class="com.internousdev.info.action.GoAdminSiteAddAction"
+			method="execute">
+			<result name="success">adminSiteAdd.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+
+				<!-- URL登録画面へ遷移するアクション -->
+		<action name="GoAdminUrlAddAction" class="com.internousdev.info.action.GoAdminUrlAddAction"
+			method="execute">
+			<result name="success">adminUrlAdd.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+<!-- ーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーーーーー -->
+
+
+
+<!-- ーーーーーーーーーーーーーーーー更新画面遷ーーーーーーーーーーーーーーーーーーーーーーーー -->
+
+				<!-- URL更新画面へ遷移するアクション -->
+		<action name="GoAdminUrlUpdateAction" class="com.internousdev.info.action.GoAdminUrlUpdateAction"
+			method="execute">
+			<result name="success">adminUrlUpdate.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+				<!-- 商品更新画面へ遷移するアクション -->
+		<action name="GoAdminItemUpdateAction" class="com.internousdev.info.action.GoAdminItemUpdateAction"
+			method="execute">
+			<result name="success">adminItemUpdate.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+
+				<!-- サイト更新画面へ遷移するアクション -->
+		<action name="GoAdminSiteUpdateAction" class="com.internousdev.info.action.GoAdminSiteUpdateAction"
+			method="execute">
+			<result name="success">adminSiteUpdate.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+
+<!-- ーーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーーーー -->
+
+<!-- ーーーーーーーーーーーーーーーーー更新アクションーーーーーーーーーーーーーーーーーーーーーー -->
+
+
+				<!-- サイト情報更新アクション -->
+		<action name="AdminSiteUpdateAction" class="com.internousdev.info.action.AdminSiteUpdateAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminSiteUpdateAction</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+
+				<!-- サイト情報更新アクション -->
+		<action name="AdminItemUpdateAction" class="com.internousdev.info.action.AdminItemUpdateAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminItemUpdateAction</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+				<!-- URL情報更新アクション -->
+		<action name="AdminUrlUpdateAction" class="com.internousdev.info.action.AdminUrlUpdateAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminUrlUpdateAction</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+<!-- ーーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーーーー -->
+
+
+<!-- ーーーーーーーーーーーーーーーーー一覧画面遷移ーーーーーーーーーーーーーーーーー -->
+		<!-- トップ画面へ遷移するアクション -->
+		<action name="GoMainTopAction" class="com.internousdev.info.action.GoMainTopAction"
+			method="execute">
+			<result name="success">mainTop.jsp</result>
+			<result name="input">mainTop.jsp</result>
+		</action>
+
+
+
+
+		<!-- 商品登録情報確認画面へ遷移するアクション -->
+		<action name="GoAdminItemAction" class="com.internousdev.info.action.GoAdminItemAddAction"
+			method="execute">
+			<result name="success">adminItem.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+				<!-- サイト登録情報確認画面へ遷移するアクション -->
+		<action name="GoAdminSiteAction" class="com.internousdev.info.action.GoAdminSiteAddAction"
+			method="execute">
+			<result name="success">adminSite.jsp</result>
+			<result name="error">adminTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+<!-- ーーーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーー -->
+
+<!-- ーーーーーーーーーーーーーーーーーメイン画面遷移ーーーーーーーーーーーーーーーーー -->
+
+		<!-- 商品選択画面へ遷移するアクション -->
+		<action name="GoMainItemSelectAction" class="com.internousdev.info.action.GoMainItemSelectAction"
+			method="execute">
+			<result name="success">itemDetail.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+				<!-- サイト選択画面へ遷移するアクション -->
+		<action name="GoMainSiteSelectAction" class="com.internousdev.info.action.GoMainSiteSelectAction"
+			method="execute">
+			<result name="success">siteDetail.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+<!-- ーーーーーーーーーーーーーーーーーーここまでーーーーーーーーーーーーーーーーーーーーーー -->
+
+
+<!-- 検索用のアクション -->
+		<action name="SelectAction" class="com.internousdev.info.action.SelectAction"
+			method="execute">
+			<result name="success">mainTop.jsp</result>
+			<result name="input">adminTop.jsp</result>
+		</action>
+
+
+
+		<!-- タイマーを実行するアクション -->
+		<action name="TimerStartAction" class="com.internousdev.info.action.TimerStartAction"
+			method="execute">
+			<result name="success">top.jsp</result>
+			<result name="input">rss.jsp</result>
+		</action>
+	</package>
+
+</struts>

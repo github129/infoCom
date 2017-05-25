@@ -1,0 +1,163 @@
+#main {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#left {
+	background-color: #e6e6e6;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 200px;
+	min-height:100%;
+}
+
+#right {
+	position: absolute;
+	height: 100%;
+	width:70%;
+	left: 210px;
+	top: 0;
+}
+
+#menu dt {
+	border: solid 1px #aaa;
+	background-color: #fff;
+}
+
+#menu dt {
+	font-size: 30px;
+}
+
+#menu dt:hover {
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+#menu dd {
+	background-color: #eee;
+	border: solid 1px #aaa;
+	display: none;
+	text-align: center;
+	display: none;
+}
+
+#menu dd:hover {
+	transition: 0.5s;
+	background-color: #fefef5;
+	transition: 0.5s;
+}
+
+#selectmenu dd {
+	background-color: #eee;
+	border: solid 1px #aaa;
+	display: none;
+	text-align: center;
+}
+
+#selectmenu dd:hover {
+	transition: 0.5s;
+	background-color: #fefef5;
+}
+
+#selectmenu dt {
+	border: solid 1px #aaa;
+	background-color: #fff;
+}
+
+#selectmenu dt {
+	font-size: 30px;
+}
+
+#selectmenu dt:hover {
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+#updatemenu dd {
+	background-color: #eee;
+	border: solid 1px #aaa;
+	display: none;
+	text-align: center;
+}
+
+#updatemenu dd:hover {
+	transition: 0.5s;
+	background-color: #fefef5;
+}
+
+#updatemenu dt {
+	border: solid 1px #aaa;
+	background-color: #fff;
+}
+
+#updatemenu dt {
+	font-size: 30px;
+}
+
+#updatemenu dt:hover {
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+#testmenu dd {
+	background-color: #eee;
+	border: solid 1px #aaa;
+	display: none;
+	text-align: center;
+}
+
+#testmenu dd:hover {
+	transition: 0.5s;
+	background-color: #fefef5;
+}
+
+#testmenu dt {
+	border: solid 1px #aaa;
+	background-color: #fff;
+}
+
+#testmenu dt {
+	font-size: 30px;
+}
+
+#testmenu dt:hover {
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+#topbutton {
+	background-color: #fff;
+	style: none;
+	font-size: 30px;
+	width: 200px;
+	margin-top: 5px;
+}
+
+#menu {
+	margin: 0;
+}
+
+#selectmenu {
+	margin: 0 auto;
+}
+
+#updatemenu {
+	margin: 0 auto;
+}
+
+#testmenu {
+	margin: 0 auto;
+}
+#center{
+width:100%;
+text-align: center;
+min-width:300px;
+}
+
+
+#topul {
+	list-style: none;
+}

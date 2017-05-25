@@ -1,0 +1,30 @@
+
+#menuwidth{
+	width:100%;
+}
+
+#menuwidth ul{
+	font-size:0;
+}
+
+#menuwidth li{
+	border: solid 1px;
+	text-align:center;
+	font-size:22px;
+	min-width:230px;
+	width:19%;
+	display: inline-block;
+	margin:0 auto;
+	width:18%;
+	background-color:#bdf7b9;
+}
+
+#logo{
+	width:200px;
+	height:100px;
+}
+.selectlist{
+	width:400px;
+		min-width:600px;
+}
+
